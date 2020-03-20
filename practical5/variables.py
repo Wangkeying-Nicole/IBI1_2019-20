@@ -14,11 +14,12 @@ d=c/11
 e=d/13
 print(e)
 #compare with a
-e>a
-
-e==a
-
-e<a
+if e>a:
+    print('e>a')
+elif e==a:
+    print('e=a')
+else:
+    print('e<a')
 
 #import X, Y, Z ,W as booleans
 X=False
