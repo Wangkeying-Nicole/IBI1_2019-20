@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer: Determinr whether the random number b is prime
+# Answer: find  random number b that is prime
 
 # Import libraries
 # randint allows drawing a random number, 
