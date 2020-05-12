@@ -12,7 +12,7 @@ b%7
 c=b/7
 d=c/11
 e=d/13
-print(e)
+print("e="+str(e))
 #compare with a
 if e>a:
     print('e>a')
@@ -22,9 +22,17 @@ else:
     print('e<a')
 
 #import X, Y, Z ,W as booleans
+#the value of X and Y can be changed
 X=False
 Y=True
-Z=(X and not Y)or(Y and not X)
-print(Z)
+#calculate the value of Z
+Z=(X and not Y)or(Y and not X)#when X or Y is True(not both), Z is true
+print("Z="+str(Z))
+#calculate the value of W
 W=(X!=Y)
-print(W)
+print("W="+str(W))
+#comparison between W and Z
+if W==Z:
+    print('W and Z are the same')
+if W!=Z:
+    print('W and Z are different')
