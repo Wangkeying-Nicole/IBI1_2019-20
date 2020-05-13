@@ -1,0 +1,4 @@
+question：How have new cases and total cases developed over time in Spain? 
+line number ：68-105
+discussion：The figure shows that the "new cases" began to increase rapidly at about 2020/3/9(with some fluctuation), reached its highest point(8578) at 2020/3/27, then it began to reduce after that.
+However, the total cases kept increasing, but its speed(slope) began to slow down.
