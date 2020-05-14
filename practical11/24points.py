@@ -42,7 +42,7 @@ def select_copy(l: list):
    for item in sci[len(l)]:
       l.append(item)
       select_copy(l)
-      l.pop()
+      l.pop()#remove the last item
    
 select_copy([])
  
@@ -63,7 +63,7 @@ def select_apply(i:int, j:int, k:int, l:list):# k indicates the 6 operations
         else:
             out = l[j] / l[i]
     if (out == 24):
-        return (0)#finish
+        return (0)#finish when 24 appear in result
     else:
         l[i] = out
         l.pop(j)
@@ -74,7 +74,7 @@ if flag==True:
  for item in all_sit:
    num_copy=num.copy()
    for jtem in item:
-       if (select_apply(jtem[0], jtem[1], jtem[2], num_copy) ==0 ) and a == 0:
+       if (select_apply(jtem[0], jtem[1], jtem[2], num_copy) ==0 ) and a == 0:#judge 24 have found
           print("Yes")
           print("recursion times: " + str(n))
           a=1
