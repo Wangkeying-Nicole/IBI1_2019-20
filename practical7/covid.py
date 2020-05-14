@@ -13,8 +13,8 @@ import numpy as np
 #importing the .csv file
 os.chdir(r"D:\learning material\IBI1 8011\Pratical\IBI1_2019-20\practical7")
 covid_data=pd.read_csv("full_data.csv")
-#showing all rows, and every third column between (and including) 0 and 15
-print(covid_data.iloc[:,0:16:3])
+#showing all column, and every third rows between (and including) 0 and 15
+print(covid_data.iloc[0:16:3,:])
 #used a Boolean to show “total_cases” for all rows corresponding to Afghanistan
 columns_1 = [False, True, False, False, True,False] 
 b= covid_data.iloc[:,columns_1]
