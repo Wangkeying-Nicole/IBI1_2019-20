@@ -4,27 +4,26 @@ Created on Wed Apr  1 19:37:06 2020
 
 @author: 86158
 """
+#import library
 import re
 count=0
 m=0
 num={}
 temp=input('please input a filename:')
-
-with open(temp,'r') as xfile:
- with open('mito_RC.fa','w') as yfile:
+#import file, and create a yfile for output
+with open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa','r') as xfile:
+ with open(temp,'w') as yfile:
   for line in xfile:
-      if line.startswith('>'):
+      if line.startswith('>'):#start reading
           cdna=''
-          result='>'
           seq=''
-          if re.search('Mito:',line):
+          if re.search('Mito:',line):# sequences of mitochondria genes 
            m=m+1
            write=re.findall(r'gene:(.+) gene_biotype:',line)
            name=write[0]
-           n=20-len(name)
            out='name:'+name+'\n'
            yfile.write(out)
-           result=out
+           #read and output lengh of the sequence
            while True:
               line=xfile.readline()
               if not line:
@@ -39,8 +38,8 @@ with open(temp,'r') as xfile:
                   count=0
                   break
               count=count+len(line)-1
-              seq=seq+line
-           result=result+out
+              seq=seq+line#read the original sequence
+           #get the complementary sequences 
            seq=','.join(seq) 
            cdna=''
            list=seq.split(',')
@@ -53,9 +52,8 @@ with open(temp,'r') as xfile:
                cdna="C"+cdna
              elif i=='T':
                cdna="A"+cdna
-           yfile.write(cdna+'\n')
-           print(result[:-1])
-           print(cdna+'\n')
+           yfile.write(cdna+'\n')#output cdna
+       
 
 
            

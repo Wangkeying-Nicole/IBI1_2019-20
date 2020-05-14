@@ -4,12 +4,13 @@ Spyder Editor
 
 This is a temporary script file.
 """
-
+#read the sequence
 seq='ATGCGACTACGATCGAGGGCCAT'
 seq=','.join(seq) 
-dna={}
 cdna=''
+#turn the sequence into a list
 list=seq.split(',')
+#get the complementary sequence
 for i in list:
     if i=='A':
         cdna="T"+cdna
@@ -19,6 +20,6 @@ for i in list:
         cdna="C"+cdna
     elif i=='T':
         cdna="A"+cdna
-        
+# output 
 print(cdna)
 
