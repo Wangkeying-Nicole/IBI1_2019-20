@@ -50,17 +50,17 @@ for i in ids:
     count = 0
     for j in dic:
         if i in dic[j]:
-            count += 1#count the element in the total
+            count += 1#count the elements in the general list
             m.append (j)
     n = m[:]
     inc = count
-    while inc != 0 :#count the element in the single list, until there is no more list inside the list
+    while inc != 0 :#count the elements in the single list, until there is no more list inside the list
         m = []
         inc = 0
         for k in n:
             for j in dic:
                 if k in dic[j]:
-                    count += 1
+                    count += 1#count the total elements
                     inc += 1
                     m.append (j)
         n = m[:]
