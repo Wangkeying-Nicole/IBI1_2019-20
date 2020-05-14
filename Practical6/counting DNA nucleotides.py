@@ -9,16 +9,16 @@ Created on Wed Mar 18 10:43:47 2020
 DNA='ATGCTTCAGAAAGGTCTTACG'
 d={}
 for b in DNA:
-    d[b]=(d[b]+1) if (b in d) else(1)
-print (d)
+    d[b]=(d[b]+1) if (b in d) else(1)#'A''C''T''G'store separately
+print (d)#output the amount of the 
 
 #method for counting#2 import sequence d
 str='ATGCTTCAGAAAGGTCTTACG'
 str=','.join(str)
 d={}
-list=str.split(',')
+list=str.split(',')#turn into a list——>count
 for i in list:
-    d[i]=list.count(i)
+    d[i]=list.count(i)#'A''C''T''G'store separately
 print(d)
 
 import matplotlib.pyplot as plt
