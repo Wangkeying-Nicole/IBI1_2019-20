@@ -1,0 +1,6 @@
+This term, I learned to use Github, Python, and many softwares that I haven't used before. 
+Github is really a useful tool for group project, and also a helpful to organize my own work.
+Python using spider is easy understanding. However, I still met many problems when writing my code (error came).
+I discussed with my classmate online and shared our codes. Finally, I finished the codes. 
+It is uneasy, but I feel a sense of achievement after realizing a function.
+I learned a lot when writing the codes(function, use of parameter...). It is really a good way to learn things practically.

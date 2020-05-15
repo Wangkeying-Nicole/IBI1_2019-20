@@ -36,7 +36,7 @@ for x in range(len(defs)):
 ids=[]
 names=[]
 d=[]
-for i in a:
+for i in a:#use the element in a to loop to get the data
     IDs=terms.item(i).getElementsByTagName('id')[0]
     ids.append(IDs.childNodes[0].data)
     NAMEs=terms.item(i).getElementsByTagName('name')[0]
@@ -64,7 +64,7 @@ for i in ids:
                     inc += 1
                     m.append (j)
         n = m[:]
-    childnode.append (count)
+    childnode.append (count) 
     
 #output
 xfile=pd.DataFrame({'id':ids,'name':names,'definition':d,'childnodes':childnode})

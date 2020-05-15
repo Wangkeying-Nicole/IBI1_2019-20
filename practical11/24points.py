@@ -8,16 +8,16 @@ Created on Sat May  9 15:44:48 2020
 #number input
 number = input("Please input numbers to compute 24: (use ',' to divide them)")
 num = []
-flag=True
+flag=True#mark if the number input is (1,24)
 for items in number.split(","):
    num.append(float(items))
-for items in num:
+for items in num:#judege the input number 
    if ((items > 23) or (items < 1)):
        flag=False
        print(str(items)+" is not between integers 1 to 23."+'The input number must be integers from 1 to 23 ')
        break
    
-# ser up function to list all the possible situations of the arrangement and the selection
+# set up function to list all the possible situations of the arrangement and the selection
 def select_calc(l: int):
    return_list = []
    for i in list(range(l-1)):
@@ -25,7 +25,7 @@ def select_calc(l: int):
           for k in range(6):
              return_list.append([i, j, k])
    return (return_list)
-#store the possible arrangement in a list 
+#store the possible arrangement in list (use the function)
 sc = [[], []]
 for i in range(2, len(num) + 1):
    sc.append(select_calc(i))
@@ -69,7 +69,7 @@ def select_apply(i:int, j:int, k:int, l:list):# k indicates the 6 operations
         l.pop(j)
         return (1)#continue to find
 a=0 #mark if 24 has got  
-n = 1
+n = 1#count the times of running
 if flag==True:
  for item in all_sit:
    num_copy=num.copy()
@@ -79,6 +79,6 @@ if flag==True:
           print("recursion times: " + str(n))
           a=1
        else:
-          n = n + 1
+          n = n + 1#count the times of running
  if a == 0:
     print("No")
